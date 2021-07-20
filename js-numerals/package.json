@@ -1,19 +1,41 @@
 {
   "name": "ts",
   "version": "1.0.0",
-  "description": "Create a web-based solution that converts numeric input into the English phrase of that number.",
+  "description": "",
   "main": "index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "start:watch": "nodemon src/index.ts"
+    "start:watch": "nodemon src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:cov": "jest --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^26.0.24",
     "@types/node": "^16.3.3",
+    "jest": "^27.0.6",
     "nodemon": "^2.0.12",
+    "ts-jest": "^27.0.3",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "rootDir": "src",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
   }
 }
