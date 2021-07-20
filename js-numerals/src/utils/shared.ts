@@ -30,7 +30,6 @@ const handleDigits = (firstDigit:number ,secondDigit:number, thirdDigit:number) 
             else text+=" "
         }
     }
-    
     return text;
 }
 
